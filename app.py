@@ -11,10 +11,13 @@ def index():
 
 @app.route("/search")
 def search():
-    q = request.args.get("q")
+    q = request.args.get("q", '')
     if q:
         shows = db.execute("SELECT * from shows_title where originalTitle LIKE ? AND CAST(startYear AS UNSIGNED) >= 2003 LIMIT 50", "%" + q + "%")
     else:
         shows = []
     return render_template("search.html", shows=shows)
 
+
+if __name__ == '__main__':
+    app.run(debug=True)
