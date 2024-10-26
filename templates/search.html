@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+            {% for show in shows %}
+                <li>{{ show["originalTitle"] }} - ({{ show["startYear"] }})  Type: {{ show["titleType"] }}</li>
+            {% endfor %}
+
+{% endblock %}
