@@ -2,17 +2,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('https://cdn.pixabay.com/photo/2024/02/27/15/17/tree-frog-8600329_960_720.jpg');
-    background-size: cover; /* Cover entire background */
-    background-position: center;
-    background-attachment: fixed; /* Fixes the background during scroll */
+    background-color: #f0f2f5;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff;
 }
 
 body::before {
