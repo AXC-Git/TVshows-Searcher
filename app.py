@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from cs50 import SQL
 
-db = SQL("sqlite:///shows_title.db")
+db = SQL("sqlite:///netflix_shows.db")
 app = Flask(__name__)
 
 
