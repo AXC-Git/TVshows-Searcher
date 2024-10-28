@@ -1,12 +1,18 @@
 /* static/css/style.css */
 
 body {
-    background: linear-gradient(120deg, rgba(20, 20, 20, 0.8), rgba(50, 50, 50, 0.8)), 
-                url('https://media.istockphoto.com/id/2152164861/photo/tv-with-different-video-streaming-services.jpg?s=1024x1024&w=is&k=20&c=BJT7DLMjQzoYJ9MFiX8Thqsk1R7XR4WTv10E_ygkFSk=');
+    font-family: Arial, sans-serif;
+    background-image: url('https://media.istockphoto.com/id/2152164861/photo/tv-with-different-video-streaming-services.jpg?s=1024x1024&w=is&k=20&c=BJT7DLMjQzoYJ9MFiX8Thqsk1R7XR4WTv10E_ygkFSk=');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    animation: fadeIn 5s ease-in-out; /* Animation effect */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
 }
 
 @keyframes fadeIn {
