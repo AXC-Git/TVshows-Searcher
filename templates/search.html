@@ -4,7 +4,7 @@
 
             {% for show in shows %}
                 <li>
-                    <span>{{ show["originalTitle"] }}</span> - <span>({{ show["startYear"] }})</span> <span>Type: {{ show["titleType"] }}</span>
+                    <span>{{ show["title"] }}</span> - <span>({{ show["release_year"] }})</span> <span>Type: {{ show["type"] }}</span>
                 </li>
             {% endfor %}
 

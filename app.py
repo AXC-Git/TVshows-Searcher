@@ -13,7 +13,7 @@ def index():
 def search():
     q = request.args.get('q', '').strip()
     if q:
-        shows = db.execute("SELECT * from shows_title where originalTitle LIKE ? AND CAST(startYear AS UNSIGNED) >= 2003 LIMIT 50", "%" + q + "%")
+        shows = db.execute("SELECT * from netflix_shows where title LIKE ? LIMIT 50", "%" + q + "%")
     else:
         shows = []
     return render_template("search.html", shows=shows)
