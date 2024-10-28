@@ -12,16 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #fff;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 2;
-    }
+    color: #e2dbdb;
 }
 
 body::before {
@@ -31,20 +22,25 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
     z-index: -1;
 }
 
 input[type="search"] {
-    width: 100%;
-    max-width: 500px;
+    position: fixed;            /* Keeps the search bar in place when scrolling */
+    top: 250px;                  /* Adjust to position vertically from the top */
+    left: 60%;                  /* Centers it horizontally */
+    transform: translateY(-50%); /* Ensures the bar is centered on the screen */
+    width: 200%;
+    max-width: 400px;
     padding: 10px;
     font-size: 16px;
     border-radius: 8px;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(22, 22, 22, 0.1);
     outline: none;
     transition: border 0.2s ease;
+    background-color: #fff;
+    z-index: 1000;
 }
 
 input[type="search"]:focus {
@@ -52,13 +48,15 @@ input[type="search"]:focus {
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
+    position: absolute;
+    left: 100px;                 /* Leave some space between search bar and results */
+    top: 50px;                   /* Adjust top margin if needed */
     max-width: 600px;
-    width: 100%;
-    margin: 20px 0;
+    width: calc(100% - 300px);   /* Adjust width to fill the remaining screen space */
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
-
 
 li {
     background-color: #fff;
@@ -72,8 +70,7 @@ li {
     align-items: center;
 }
 
-/* Style for show details */
 li span {
-    color: #333;
+    color: #222121;
     font-weight: bold;
 }
